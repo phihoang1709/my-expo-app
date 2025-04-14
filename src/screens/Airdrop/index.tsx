@@ -8,7 +8,8 @@ import {
   Dimensions,
   Animated,
 } from "react-native";
-import FastImage from "react-native-fast-image";
+// import FastImage from "react-native-fast-image";
+import { Image } from 'expo-image';
 
 Dimensions.get("window");
 
@@ -118,7 +119,7 @@ const AirdropScreen: React.FC = () => {
     <View style={styles.container}>
       <View style={styles.spawnBox}>
         <View>
-          <FastImage
+          <Image
             source={Images.jfox}
             style={{
               width: 420,
@@ -138,7 +139,7 @@ const AirdropScreen: React.FC = () => {
               },
             ]}>
             <TouchableOpacity onPress={() => handleCoinTap(coin.id)}>
-              <FastImage
+              <Image
                 source={Images.coin}
                 style={{
                   width: 34,

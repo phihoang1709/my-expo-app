@@ -40,8 +40,8 @@ import {SETTING_ROUTES} from "@/navigation/routes";
 import {useNavigation} from "@react-navigation/native";
 import React from "react";
 import {View, Text, Pressable, Switch} from "react-native";
-import FastImage from "react-native-fast-image";
-
+// import FastImage from "react-native-fast-image";
+import { Image } from "expo-image";
 const SettingsScreen = () => {
   const navigation = useNavigation();
   const [isSoundOn, setIsSoundOn] = React.useState(true);
@@ -74,7 +74,7 @@ const SettingsScreen = () => {
           justifyContent: "space-between",
         }}>
         <View style={{flexDirection: "row", alignItems: "center"}}>
-          <FastImage
+          <Image
             source={Images.translate}
             style={{width: 40, height: 40, marginRight: 12}}
           />
@@ -85,7 +85,7 @@ const SettingsScreen = () => {
             <Text style={{color: "#D0F2FF"}}>English</Text>
           </View>
         </View>
-        <FastImage
+        <Image
           source={Images.arrow_right}
           style={{width: 24, height: 24, marginRight: 12}}
         />
@@ -105,7 +105,7 @@ const SettingsScreen = () => {
           justifyContent: "space-between",
         }}>
         <View style={{flexDirection: "row", alignItems: "center"}}>
-          <FastImage
+          <Image
             source={Images.sound}
             style={{width: 40, height: 40, marginRight: 12}}
           />
@@ -134,7 +134,7 @@ const SettingsScreen = () => {
           flexDirection: "row",
           alignItems: "center",
         }}>
-        <FastImage
+        <Image
           source={Images.policy}
           style={{width: 40, height: 40, marginRight: 12}}
         />
@@ -153,7 +153,7 @@ const SettingsScreen = () => {
           alignItems: "center",
           backgroundColor: "rgba(255, 0, 0, 0.8)",
         }}>
-        <FastImage
+        <Image
           source={Images.trash}
           style={{width: 40, height: 40, marginRight: 12}}
         />

@@ -1,7 +1,8 @@
 import {Images, Logo_Tiktok} from "@/assets";
 import React from "react";
 import {View, Text, FlatList, Pressable} from "react-native";
-import FastImage from "react-native-fast-image";
+// import FastImage from "react-native-fast-image";
+import {Image} from "expo-image";
 import {styles} from "./styles";
 import {useSafeAreaInsets} from "react-native-safe-area-context";
 import LinearGradient from "react-native-linear-gradient";
@@ -50,10 +51,10 @@ const GameScreen: React.FC = () => {
         // }
         ListHeaderComponent={() => (
           <View style={{alignItems: "center", marginBottom: 24}}>
-            <FastImage
+            <Image
               source={Images.mission_fox}
               style={{width: 320, height: 270}}
-              resizeMode="contain"
+              contentFit="contain"
             />
             <Text className="text-4xl font-bold color-white">{"Ganmes"}</Text>
             <Text className="text-base color-white">

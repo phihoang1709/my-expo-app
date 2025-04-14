@@ -16,7 +16,7 @@ export default function MainTabs() {
       <Header />
       <View style={{flex: 1}}>
         <Tab.Navigator
-          tabBar={props => <CustomTabBar {...props} />}
+          // tabBar={props => <CustomTabBar {...props} />}
           screenOptions={{headerShown: false}}>
           <Tab.Screen name="Missions" component={MissionScreen} />
           <Tab.Screen name="Games" component={GameScreen} />

@@ -8,7 +8,8 @@ import {
   useStartTaskMutation,
 } from "@/services/mission.api";
 import {useSafeAreaInsets} from "react-native-safe-area-context";
-import FastImage from "react-native-fast-image";
+// import FastImage from "react-native-fast-image";
+import { Image } from "expo-image";
 import {
   Images,
   Logo_Instagram,
@@ -94,7 +95,7 @@ const MissionScreen = () => {
         case TaskStatus.OPEN:
           return (
             <Pressable style={styles.reward} onPress={handlePress}>
-              <FastImage source={Images.coin} style={{width: 24, height: 24}} />
+              <Image source={Images.coin} style={{width: 24, height: 24}} />
               <Text style={styles.rewardText}>{" +" + item.pointsReward}</Text>
             </Pressable>
           );
@@ -217,7 +218,7 @@ const MissionScreen = () => {
         ListHeaderComponent={() => (
           <View>
             <View style={{alignItems: "center", marginBottom: 24}}>
-              <FastImage
+              <Image
                 source={Images.mission_fox}
                 style={{width: 320, height: 270}}
                 resizeMode="contain"
@@ -261,7 +262,7 @@ const MissionScreen = () => {
           </View>
         )}
       />
-      <PopupModal
+      {/* <PopupModal
         visible={visible}
         onClose={() => setVisible(false)}
         title={taskItem?.title ?? ""}
@@ -294,7 +295,7 @@ const MissionScreen = () => {
 
           setVisible(false);
         }}
-      />
+      /> */}
     </View>
   );
 };
